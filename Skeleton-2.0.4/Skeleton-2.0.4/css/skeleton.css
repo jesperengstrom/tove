@@ -350,8 +350,7 @@ blockquote,
 dl,
 figure,
 table,
-ol,
-form {
+ol {
   margin-bottom: 2.5rem; }
 
 

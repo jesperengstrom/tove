@@ -1,7 +1,6 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 h1, h2 {
@@ -11,11 +10,11 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 h3, h4 {
@@ -27,7 +26,7 @@ h3, h4 {
 
 h3 {
   margin-top: 2rem;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 h4 {
@@ -38,21 +37,39 @@ p {
   font-size: 16px;
   color: rgb(115,115,115);
   letter-spacing: 0.04px;
-  line-height: 20px;
+  line-height: 24px;
   word-break: break-word;
 }
 
+p:last-of-type {
+  margin-bottom: 0;
+}
+
 main {
-  width: 55%;
+  max-width: 685px;
+  margin: auto;
 }
 
 article {
   margin-right: 9rem;
+  margin-left: 1rem;
 }
 
 label {
   color: #686868;
   font-weight: normal;
+}
+
+footer {
+  background-color: #a5a5a540;
+}
+
+form {
+  width: 550px;
+}
+
+#logo {
+  padding: 2rem 1rem;
 }
 
 /* nav */
@@ -81,6 +98,12 @@ li a:hover {
   color: lightgray;
 }
 
+/* form */
+
+textarea {
+  height: 200px;
+}
+
  /* flex */
 
 .flex {
@@ -95,7 +118,50 @@ li a:hover {
   flex-direction: row;
 }
 
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-row-l-col-s {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 850px){
+  main {
+      max-width: 830px;
+  }
+
+  .flex-row-l-col-s {
+    flex-direction: row;
+  }
+
+}
+
 /* margins */
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
 
 .mt-5 {
   margin-top: 5rem;
@@ -103,6 +169,10 @@ li a:hover {
 
 .mt-3 {
   margin-top: 3rem;
+}
+
+.ml-3 {
+  margin-left: 3rem;
 }
 
 .mt-2 {
@@ -115,6 +185,14 @@ li a:hover {
 
 /* padding  */
 
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
 .pl-3 {
   padding-left: 3rem;
 }
@@ -123,14 +201,33 @@ li a:hover {
   padding-right: 3rem;
 }
 
+.pt-3 {
+  padding-top: 3rem;
+}
+
 .pl-5 {
   padding-left: 5rem;
 }
 
 /* divider images */
 
-.divider-image-1 {
-  width: 100%;
+.divider {
   height: 150px;
-  background:red;
+  background-color: #ffffff57;
+  background-blend-mode: lighten;
+}
+
+#divider-image-1 {
+  background-image: url(./img/div-1.jpg);
+  background-size: cover;
+}
+
+#divider-image-2 {
+  background-image: url(./img/div-2.jpg);
+  background-position: initial;
+}
+
+#divider-image-3 {
+  background-image: url(./img/div-2.jpg);
+  background-position: bottom;
 }
