@@ -277,61 +277,40 @@ li a:hover {
   background-blend-mode: lighten;
 }
 
-#divider-image-1 {
+#divider-image-1, 
+#divider-image-2,
+#divider-image-3 {
   position: relative;
 }
 
-/* #divider-image-2 {
-  background-image: url(./img/div-2.jpg);
-  background-position: initial;
-} */
 
-#divider-image-1::after {
+#divider-image-1::after, 
+#divider-image-2::after,
+#divider-image-3::after {
   content: '';
   position: absolute;
+  left: -2rem;
   height: 125px;
   width: 700px;
-  background-image: url(./img/div-1.jpg);
-  background-position: initial;
-  background-size: cover;
-  left: -2rem;
   background-color: #ffffff52;
   background-blend-mode: lighten;
 }
 
-
-#divider-image-2 {
-  position: relative
+#divider-image-1::after {
+  background-image: url(./img/div-1.jpg);
+  background-position: initial;
+  background-size: cover;
 }
+
 
 #divider-image-2::after {
-  content: '';
-  position: absolute;
-  height: 125px;
-  width: 700px;
   background-image: url(./img/div-2.jpg);
   background-position: initial;
-  left: -2rem;
-  background-color: #ffffff57;
-  background-blend-mode: lighten;
-}
-
-
-#divider-image-3 {
-  position: relative
 }
 
 #divider-image-3::after {
-  content: '';
-  position: absolute;
-  height: 125px;
-  width: 700px;
   background-image: url(./img/div-2.jpg);
   background-position: bottom;
-  left: -2rem;
-  background-color: #ffffff57;
-  background-blend-mode: lighten;
-
 }
 
 
@@ -391,6 +370,13 @@ li a:hover {
 
   .mt-2-l {
     margin-top: 2rem;
+  }
+
+  #divider-image-1::after, 
+  #divider-image-2::after, 
+  #divider-image-3::after {
+    left: 0;
+    width: 640px;
   }
 }
 
