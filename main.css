@@ -33,6 +33,17 @@ h4 {
   font-size: 20px;
 }
 
+.desktop-heading {
+  display: none;
+}
+
+.mobile-heading {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+
 p {
   font-size: 16px;
   color: rgb(115,115,115);
@@ -46,12 +57,16 @@ p:last-of-type {
 }
 
 main {
-  max-width: 685px;
-  margin: auto;
+  max-width: 650px;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 article {
-  margin-right: 9rem;
+  margin-right: 1rem;
   margin-left: 1rem;
 }
 
@@ -60,12 +75,24 @@ label {
   font-weight: normal;
 }
 
+/* footer */
+
 footer {
   background-color: #a5a5a540;
+  width: 100%;
 }
 
 form {
   width: 550px;
+  max-width: 100%;
+}
+
+textarea {
+  height: 200px;
+}
+
+.mapouter {
+  max-width: 100%;
 }
 
 #logo {
@@ -98,11 +125,6 @@ li a:hover {
   color: lightgray;
 }
 
-/* form */
-
-textarea {
-  height: 200px;
-}
 
  /* flex */
 
@@ -126,23 +148,29 @@ textarea {
   align-items: flex-end;
 }
 
+.align-start {
+  align-items: flex-start;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .flex-row-l-col-s {
   flex-direction: column;
 }
 
-@media screen and (min-width: 850px){
-  main {
-      max-width: 830px;
-  }
+.flex-row-l-colreverse-s {
+  flex-direction: column-reverse;
+}
 
-  .flex-row-l-col-s {
-    flex-direction: row;
-  }
-
+.align-end-l-center-s, 
+.align-start-l-center-s {
+  align-items: center;
 }
 
 /* margins */
@@ -163,34 +191,58 @@ textarea {
   margin-right: 2rem;
 }
 
-.mt-5 {
-  margin-top: 5rem;
-}
-
-.mt-3 {
-  margin-top: 3rem;
-}
-
-.ml-3 {
-  margin-left: 3rem;
+.mt-1 {
+  margin-top: 1rem;
 }
 
 .mt-2 {
   margin-top: 2rem;
 }
 
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mt-2-l {
+  margin-top: 1rem;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
 .mb-2 {
   margin-bottom: 2rem;
 }
 
+.mt-s {
+  margin-top: 1rem;
+}
+
 /* padding  */
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
 
 .pl-1 {
   padding-left: 1rem;
 }
 
-.pr-1 {
-  padding-right: 1rem;
+.pl-2 {
+  padding-left: 2rem;
 }
 
 .pl-3 {
@@ -209,25 +261,146 @@ textarea {
   padding-left: 5rem;
 }
 
+.pr-s {
+  padding-right: 0;
+}
+
+.pl-l {
+  padding-left: 0;
+}
+
 /* divider images */
 
 .divider {
-  height: 150px;
+  height: 125px;
   background-color: #ffffff57;
   background-blend-mode: lighten;
 }
 
 #divider-image-1 {
-  background-image: url(./img/div-1.jpg);
-  background-size: cover;
+  position: relative;
 }
 
-#divider-image-2 {
+/* #divider-image-2 {
   background-image: url(./img/div-2.jpg);
   background-position: initial;
+} */
+
+#divider-image-1::after {
+  content: '';
+  position: absolute;
+  height: 125px;
+  width: 700px;
+  background-image: url(./img/div-1.jpg);
+  background-position: initial;
+  background-size: cover;
+  left: -2rem;
+  background-color: #ffffff52;
+  background-blend-mode: lighten;
 }
 
+
+#divider-image-2 {
+  position: relative
+}
+
+#divider-image-2::after {
+  content: '';
+  position: absolute;
+  height: 125px;
+  width: 700px;
+  background-image: url(./img/div-2.jpg);
+  background-position: initial;
+  left: -2rem;
+  background-color: #ffffff57;
+  background-blend-mode: lighten;
+}
+
+
 #divider-image-3 {
+  position: relative
+}
+
+#divider-image-3::after {
+  content: '';
+  position: absolute;
+  height: 125px;
+  width: 700px;
   background-image: url(./img/div-2.jpg);
   background-position: bottom;
+  left: -2rem;
+  background-color: #ffffff57;
+  background-blend-mode: lighten;
+
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 850px) {
+
+  main {
+      max-width: 800px;
+      margin: auto;
+  }
+
+  article {
+    margin-right: 9rem;
+  }
+
+  h1, h2 {
+    text-align: left;
+  }
+
+  .desktop-heading {
+    display: block;
+  }
+
+  .mobile-heading {
+    display: none;
+  }
+
+  img {
+    max-width: none;
+  }
+
+  .flex-row-l-col-s, 
+  .flex-row-l-colreverse-s {
+    flex-direction: row;
+  }
+
+  .align-end-l-center-s {
+    align-items: flex-end;
+  }
+
+  .align-start-l-center-s {
+    align-items: flex-start;
+  }
+
+  .mt-s {
+    margin-top: 0;
+  }
+
+  .pr-s {
+    padding-right: 2rem;
+  }
+
+  .pl-l {
+    padding-left: 3rem;
+  }
+
+  .mt-2-l {
+    margin-top: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
 }

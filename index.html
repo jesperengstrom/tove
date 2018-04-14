@@ -11,22 +11,26 @@
   <title>Tove Falk</title>
   <meta name="description" content="Privat psykologmottagning, Tove Falk, leg. psykolog. Inriktning mot psykodynamisk terapi. Tar emot vuxna och ungdomar.">
 </head>
-<body>
+<body class="flex flex-column align-center">
   <main class="flex flex-column pl-1 pr-1">
-    <nav class="mt-2 ml-1 mr-1">
+    <nav class="mt-2-l ml-1 mr-1">
       <ul>
         <li><a href="#pdt">PDT</a><span class="nav-break">|</span></li>
         <li><a href="#about">Om mig</a><span class="nav-break">|</span></li>
         <li><a href="#contact">Kontakt</a></li>
       </ul>
     </nav>
-    <header class="flex flex-row-l-col-s ml-1 mr-1">
-      <div class="flex align-end">
+    <div class="ml-1 mr-1 mt-1">
+        <h1 class="mobile-heading">Tove Falk</h1>
+        <h2 class="mobile-heading">leg. psykolog</h2>
+    </div>
+    <header class="flex flex-row-l-col-s align-end-l-center-s ml-1 mr-1">
+      <div class="flex align-end justify-center pt-2">
         <img src="./img/IMG_0910.jpg" alt="Tove Falk">
       </div>
-      <div class="pl-3 pr-3">
-        <h1>Tove Falk</h1>
-        <h2 class="mb-2">leg. psykolog</h2>
+      <div class="pl-l mt-s">
+        <h1 class="desktop-heading">Tove Falk</h1>
+        <h2 class="mb-2 desktop-heading">leg. psykolog</h2>
         <p>
             Jag heter Tove Falk och är legitimerad psykolog med inriktning mot psykodynamisk psykoterapi. Jag har erfarenhet av att arbeta med vuxna, ungdomar och barn. Min grundläggande metod är klassisk psykodynamisk terapi samt olika psykodynamiska korttidsterapiformer. Jag är även HBTQ-diplomerad.
         </p>
@@ -85,8 +89,23 @@
       </p>
     </article>
   </main>
-  <footer class="flex flex-column mt-2 pt-3">
-    <div class="flex flex-row-l-col-s justify-center ml-2 mr-2">
+  <footer class="flex flex-column mt-3 pt-3">
+    <div class="flex flex-row-l-col-s justify-evenly align-start-l-center-s ml-2 mr-2">
+      <form class="pr-s">
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput">E-post</label>
+              <input class="u-full-width" id="exampleEmailInput" type="email" placeholder="" required>
+            </div>
+            <div class="six columns">
+              <label for="nameInput">Namn</label>
+              <input class="u-full-width" id="nameInput" type="text" placeholder="" required>
+            </div>
+          </div>
+          <label for="exampleMessage">Meddelande</label>
+          <textarea class="u-full-width" id="exampleMessage" rows="4"></textarea>
+          <input class="button" type="submit" value="Skicka">
+        </form>
       <div class="mapouter" style="border: 1px solid #bcbcbcb5;">
         <div class="gmap_canvas">
           <iframe width="550" height="380" id="gmap_canvas" src="https://maps.google.com/maps?q=Lilla Aspuddsvägen 2&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
@@ -95,21 +114,6 @@
         <style>.mapouter{overflow:hidden;height:380px;width:550px;}.gmap_canvas {background:none!important;height:380px;width:550px;}
         </style>
       </div>
-      <form class="pl-3">
-        <div class="row">
-          <div class="six columns">
-            <label for="exampleEmailInput">E-post</label>
-            <input class="u-full-width" id="exampleEmailInput" type="email" placeholder="" required>
-          </div>
-          <div class="six columns">
-            <label for="nameInput">Namn</label>
-            <input class="u-full-width" id="nameInput" type="text" placeholder="" required>
-          </div>
-        </div>
-        <label for="exampleMessage">Meddelande</label>
-        <textarea class="u-full-width" id="exampleMessage" rows="4"></textarea>
-        <input class="button" type="submit" value="Skicka">
-      </form>
     </div>
     <section id="logo" class="flex justify-center">
       <a href="http://www.psykologforbundet.se/Psykologforetagarna/">
