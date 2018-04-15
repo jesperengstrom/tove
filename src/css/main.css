@@ -322,6 +322,10 @@ li a:hover {
   background-position: bottom;
 }
 
+/* utility */
+.full-width {
+  width: 100%;
+}
 
 /* media queries */
 
@@ -386,6 +390,10 @@ li a:hover {
   #divider-image-3::after {
     left: 0;
     width: 640px;
+  }
+
+  #tove-wrapper {
+    min-width: 326px;
   }
 }
 
