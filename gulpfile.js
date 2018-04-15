@@ -1,16 +1,43 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
+var sourcemaps = require('gulp-sourcemaps');
+
+const dirs = {
+  src: 'src',
+  dest: 'dist',
+};
+
+const cssPaths = {
+  srcFiles: `${dirs.src}/css/*.css`,
+  destDir: `${dirs.dest}/css`,
+}
+
+gulp.task('css', () => {
+  return gulp.src(cssPaths.srcFiles)
+    .pipe(sourcemaps.init())
+    .pipe(postcss([
+      autoprefixer(),
+      cssnano(),
+    ]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(cssPaths.destDir));
 });
 
-gulp.watch("*.html").on('change', browserSync.reload);
-gulp.watch("*.css").on('change', browserSync.reload);
+gulp.task('browser-sync', () => {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
 
-gulp.task('default', ['browser-sync']);
+gulp.task('watch', () => {
+  gulp.watch(cssPaths.srcFiles, ['css', browserSync.reload]);
+  gulp.watch("*.html", browserSync.reload);
+});
+
+gulp.task('default', ['css', 'browser-sync', 'watch']);

@@ -10,9 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1"
   },
   "dependencies": {
+    "autoprefixer": "^8.2.0",
+    "cssnano": "^3.10.0",
+    "gulp-sourcemaps": "^2.6.4",
     "normalize.css": "^8.0.0"
   }
 }

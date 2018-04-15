@@ -78,7 +78,7 @@ label {
 /* footer */
 
 footer {
-  background-color: #a5a5a540;
+  background: #dedede;
   width: 100%;
 }
 
@@ -91,8 +91,17 @@ textarea {
   height: 200px;
 }
 
+ /* map  */
 .mapouter {
+  overflow:hidden;
+  height:380px;
+  width:550px;
   max-width: 100%;
+}
+.gmap_canvas {
+  background:none!important;
+  height:380px;
+  width:550px;
 }
 
 #logo {
@@ -297,19 +306,19 @@ li a:hover {
 }
 
 #divider-image-1::after {
-  background-image: url(./img/div-1.jpg);
+  background-image: url(../img/div-1.jpg);
   background-position: initial;
   background-size: cover;
 }
 
 
 #divider-image-2::after {
-  background-image: url(./img/div-2.jpg);
+  background-image: url(../img/div-2.jpg);
   background-position: initial;
 }
 
 #divider-image-3::after {
-  background-image: url(./img/div-2.jpg);
+  background-image: url(../img/div-2.jpg);
   background-position: bottom;
 }
 
