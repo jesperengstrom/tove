@@ -1,6 +1,7 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 100%;
+  background: #73746b08;
 }
 
 h1, h2 {
@@ -58,7 +59,10 @@ p:last-of-type {
 
 main {
   max-width: 650px;
+  background: white;
   overflow: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 img {
@@ -78,7 +82,7 @@ label {
 /* footer */
 
 footer {
-  background: #dedede;
+  background: #e2e2e2;
   width: 100%;
 }
 
@@ -274,6 +278,10 @@ li a:hover {
   padding-right: 0;
 }
 
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
 .pl-l {
   padding-left: 0;
 }
@@ -298,9 +306,8 @@ li a:hover {
 #divider-image-3::after {
   content: '';
   position: absolute;
-  left: -2rem;
   height: 125px;
-  width: 700px;
+  width: 832px;
   background-color: #ffffff52;
   background-blend-mode: lighten;
 }
@@ -309,17 +316,20 @@ li a:hover {
   background-image: url(../img/div-1.jpg);
   background-position: initial;
   background-size: cover;
+  left: -2rem;
 }
 
 
 #divider-image-2::after {
   background-image: url(../img/div-2.jpg);
   background-position: initial;
+  left: -3rem;
 }
 
 #divider-image-3::after {
   background-image: url(../img/div-2.jpg);
   background-position: bottom;
+  left: -3rem;
 }
 
 /* utility */
@@ -332,12 +342,21 @@ li a:hover {
 @media screen and (min-width: 850px) {
 
   main {
-      max-width: 800px;
+      max-width: 640px;
       margin: auto;
+      overflow: visible;
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+
+  header {
+    position: relative;
+      left: -13rem;
+      width: 130%;
   }
 
   article {
-    margin-right: 9rem;
+    /* margin-right: 9rem; */
   }
 
   h1, h2 {
@@ -379,6 +398,7 @@ li a:hover {
 
   .pl-l {
     padding-left: 3rem;
+    padding-right: 1rem;
   }
 
   .mt-2-l {
@@ -388,8 +408,12 @@ li a:hover {
   #divider-image-1::after, 
   #divider-image-2::after, 
   #divider-image-3::after {
-    left: 0;
-    width: 640px;
+    left: -3rem;
+    width: 704px;
+  }
+
+  #divider-image-1::after {
+    left: -2rem;
   }
 
   #tove-wrapper {
