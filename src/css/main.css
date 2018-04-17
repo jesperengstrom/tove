@@ -86,6 +86,11 @@ footer {
   width: 100%;
 }
 
+.footer-wrapper {
+  align-items: flex-start;
+  flex-direction: row;
+}
+
 form {
   width: 550px;
   max-width: 100%;
@@ -93,19 +98,29 @@ form {
 
 textarea {
   height: 200px;
+  margin-bottom: 1rem;
 }
 
  /* map  */
+
+ iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+ }
+
 .mapouter {
   overflow:hidden;
-  height:380px;
   width:550px;
   max-width: 100%;
 }
 .gmap_canvas {
-  background:none!important;
-  height:380px;
-  width:550px;
+  position: relative;
+  padding-bottom: 67%;
+  height: 0;
+  overflow: hidden;
 }
 
 #logo {
@@ -266,16 +281,16 @@ li a:hover {
   padding-right: 3rem;
 }
 
+.pr-s {
+  padding-right: 2rem;
+}
+
 .pt-3 {
   padding-top: 3rem;
 }
 
 .pl-5 {
   padding-left: 5rem;
-}
-
-.pr-s {
-  padding-right: 0;
 }
 
 .pb-3 {
@@ -321,7 +336,7 @@ li a:hover {
 
 
 #divider-image-2::after {
-  background-image: url(../img/div-2.jpg);
+  background-image: url(../img/div-1.jpg);
   background-position: initial;
   left: -3rem;
 }
@@ -339,6 +354,27 @@ li a:hover {
 
 /* media queries */
 
+@media screen and (max-width: 1050px) {
+  .footer-wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .pr-s {
+    padding-right: 0;
+  }
+
+  form {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #tove-wrapper {
+    margin-left: 3rem;
+  }
+}
+
 @media screen and (min-width: 850px) {
 
   main {
@@ -353,10 +389,6 @@ li a:hover {
     position: relative;
       left: -13rem;
       width: 130%;
-  }
-
-  article {
-    /* margin-right: 9rem; */
   }
 
   h1, h2 {
@@ -392,10 +424,6 @@ li a:hover {
     margin-top: 0;
   }
 
-  .pr-s {
-    padding-right: 2rem;
-  }
-
   .pl-l {
     padding-left: 3rem;
     padding-right: 1rem;
@@ -419,8 +447,8 @@ li a:hover {
   #tove-wrapper {
     min-width: 326px;
   }
+  
 }
-
 
 @media screen and (max-width: 400px) {
   h1 {
